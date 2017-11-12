@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Livros de Java, Android, iPhone, Ruby, PHP e muito mais - Casa do Código</title>
+<title>Clube do Whisky</title>
 </head>
 <body>
-    <h1>Casa do Código</h1>
+    <h1>Bem Vindo ao Clube do Whisky!</h1>
 </body>
 </html>

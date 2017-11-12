@@ -7,6 +7,7 @@ import javax.transaction.Transactional;
 import org.springframework.stereotype.Repository;
 
 import br.com.cdw.models.Clients;
+import br.com.cdw.models.Drinks;
 
 @Repository
 @Transactional
@@ -17,5 +18,9 @@ public class ClientsDAO {
 	
 	public void save(Clients client){
 		eManager.persist(client);		
+	}
+	
+	public Drinks findOne(Integer id) {
+		return eManager.find(Drinks.class, id);
 	}
 }
