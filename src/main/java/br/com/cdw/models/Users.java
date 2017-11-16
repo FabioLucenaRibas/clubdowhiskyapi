@@ -1,13 +1,13 @@
 package br.com.cdw.models;
 
-import java.util.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
 public class Users {
@@ -16,66 +16,66 @@ public class Users {
 	 private String 	name;
 	 private String 	email;
 	 private String 	password;
-	 private Date 		created_at;
-	 private Date 		updated_at;
+	 private String		created_at;
+	 private String		updated_at;
 	 private Boolean 	is_enabled;
 	 
-	 @OneToOne @PrimaryKeyJoinColumn
+	 @OneToOne @PrimaryKeyJoinColumn @JsonBackReference
 	 private Clients client;
 
-	private String getName() {
+	 public String getName() {
 		return name;
 	}
 
-	private void setName(String name) {
+	 public void setName(String name) {
 		this.name = name;
 	}
 
-	private String getEmail() {
+	 public String getEmail() {
 		return email;
 	}
 
-	private void setEmail(String email) {
+	 public void setEmail(String email) {
 		this.email = email;
 	}
 
-	private String getPassword() {
+	 public String getPassword() {
 		return password;
 	}
 
-	private void setPassword(String password) {
+	 public void setPassword(String password) {
 		this.password = password;
 	}
 
-	private Date getCreated_at() {
-		return created_at;
-	}
-
-	private void setCreated_at(Date created_at) {
-		this.created_at = created_at;
-	}
-
-	private Date getUpdated_at() {
-		return updated_at;
-	}
-
-	private void setUpdated_at(Date updated_at) {
-		this.updated_at = updated_at;
-	}
-
-	private Boolean getIs_enabled() {
+	public Boolean getIs_enabled() {
 		return is_enabled;
 	}
 
-	private void setIs_enabled(Boolean is_enabled) {
+	public void setIs_enabled(Boolean is_enabled) {
 		this.is_enabled = is_enabled;
 	}
 
-	private Clients getClient() {
+	public Clients getClient() {
 		return client;
 	}
 
-	private void setClient(Clients client) {
+	public void setClient(Clients client) {
 		this.client = client;
+	}
+
+	public String getCreated_at() {
+		return created_at;
+	}
+
+	public void setCreated_at(String created_at) {
+		this.created_at = created_at;
+	}
+
+	public String getUpdated_at() {
+		return updated_at;
+	}
+
+	public void setUpdated_at(String updated_at) {
+		this.updated_at = updated_at;
 	}
 }

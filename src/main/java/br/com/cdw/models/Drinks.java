@@ -11,20 +11,29 @@ public class Drinks {
 	 private int id;
 	 
 	 private String name;
+	 private String img_drink;
 
-	private int getId() {
-		return id;
-	}
-
-	private void setId(int id) {
-		this.id = id;
-	}
-
-	private String getName() {
+	 public int getId() {
+		 return id;
+	 }
+	 
+	 public void setId(int id) {
+		 this.id = id;
+	 }
+	public String getName() {
 		return name;
 	}
 
-	private void setName(String name) {
+	public void setName(String name) {
 		this.name = name;
 	}
+
+	public String getImg_drink() {
+		return img_drink;
+	}
+
+	public void setImg_drink(String img_drink) {
+		this.img_drink = img_drink;
+	}
+
 }
